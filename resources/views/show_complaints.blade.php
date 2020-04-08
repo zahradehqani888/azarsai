@@ -38,6 +38,17 @@
                                     </div>
                                 </div>
                             <?php endif; ?>
+                            <?php if (Session::get('del')): ?>
+                            <div class="container" style="padding-top: 20px">
+                                <div class="alert alert-danger alert-dismissible fade show text-success">
+
+                                    آیا می خواهید این شکایت را حذف کنید؟
+                                    </br>
+                                    <a href="/delcomplaint/<?php echo Session::get('del') ?>"> <button type="button" class="btn btn-default" style="margin-left: 20px">بله</button></a>
+                                    <a href=""><button type="button" class="btn btn-default" >خیر</button></a>
+                                </div>
+                            </div>
+                            <?php endif; ?>
                                         <table class="table table-hover">
                                             <tr>
                                                 <th>نام</th>
@@ -45,7 +56,7 @@
                                                 <th>تلفن</th>
                                                 <th>ایمیل</th>
                                                 <th>متن پیام</th>
-                                                <th>عملیات</th>
+                                                <th></th>
 
                                             </tr>
 
@@ -56,11 +67,13 @@
                                                 <td>{{$complaint->family}}</td>
                                                 <td>{{$complaint->tel}}</td>
                                                 <td>{{$complaint->email}}</td>
-                                                <td><?php echo substr($complaint->message,0,120) ?>
-                                                <h6><a href="/co_complaint/{{$complaint->id}}">‍  مشاهده پیام </a></h6>
+                                                <td><p><?php echo substr($complaint->message,0,200) ?>...
+                                                <a href="/co_complaint/{{$complaint->id}}" style="margin-left: 20px;font-size: 13px;"> مشاهده پیام </a></p>
                                                 </td>
                                                 <td>
-                                                    <a href="#" class="icon"data-toggle="modal" data-target="#Modal1" ><i class="fa fa-trash "></i></a>
+
+                                                    {{--<a href="#" class="icon"data-toggle="modal" data-target="#Modal1" ><i class="fa fa-trash "></i></a>--}}
+                                                    <a href="/del_complaint1/{{$complaint->id}}" class="icon" ><i class="fa fa-trash "></i></a>
                                                 </td>
 
                                             </tr>

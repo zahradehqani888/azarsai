@@ -82,23 +82,23 @@
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">
                                                     <label>نام :</label><span class="error" style="color:#dc3545">*</span>
-                                                    <input type="text"name="name" class="form-control"  >
+                                                    <input type="text"name="name" class="form-control" value="{{old('name')}}" >
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label >نام خانوادگی:</label><span class="error" style="color:#dc3545">*</span>
-                                                    <input type="text"name="family" class="form-control"  >
+                                                    <input type="text"name="family" class="form-control" value="{{old('family')}}" >
                                                 </div>
                                                 <div class="form-group col-md-4">
                                                     <label>شماره تماس :</label><span class="error" style="color:#dc3545">*</span>
-                                                    <input type="text"name="tel" class="form-control"  >
+                                                    <input type="text"name="tel" class="form-control"  value="{{old('tel')}}">
                                                 </div>
                                                 <div class="form-group col-md-8">
                                                     <label >ایمیل :</label>
-                                                    <input type="text"name="email" class="form-control"  >
+                                                    <input type="text"name="email" class="form-control" value="{{old('email')}}" >
                                                 </div>
                                                 <div class="form-group col-md-12"><span class="error" style="color:#dc3545">*</span>
                                                     <label >پیام :</label>
-                                                    <textarea name="message" class="form-control"  rows="7"  ></textarea>
+                                                    <textarea name="message" class="form-control"  rows="7">{{old('message')}}</textarea>
                                                 </div>
                                             </div>
                                             

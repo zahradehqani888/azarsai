@@ -37,6 +37,7 @@ Route::get('get-city-list','BranchController@getCityList');
 Route::post('addbranch2','BranchController@add2');
 Route::get('showbranches','BranchController@show');
 Route::get('editbranch','BranchController@edit');
+Route::get('del_branch1/{id}','BranchController@del');
 Route::get('deletebranch/{id}','BranchController@delete');
 Route::get('updatebranch/{id}','BranchController@update');
 Route::post('updatebranch2/{id}','BranchController@update2');
@@ -46,12 +47,22 @@ Route::post('/addcomplaint2','ComplaintController@add2');
 Route::get('/showcomplaints','ComplaintController@show');
 Route::get('/co_complaint/{id}','ComplaintController@co');
 Route::get('/delcomplaint/{id}','ComplaintController@delete');
+Route::get('/del_complaint1/{id}','ComplaintController@del1');
+
+
+Route::get('/add_opinion','OpinionController@add');
+Route::post('/add_opinion2','OpinionController@add2');
+Route::get('/showopinion','OpinionController@show');
+Route::get('/delopinion/{id}','OpinionController@delete');
+Route::get('/co_opinion/{id}','OpinionController@co');
+Route::get('/del_opinion1/{id}','OpinionController@del1');
 
 Route::get('/addnews','NewsController@add');
 Route::post('/addnews2','NewsController@add2');
 Route::get('/shownews','NewsController@show');
 Route::get('co_news/{id}','NewsController@co');
 Route::get('/editnews','NewsController@edit');
+Route::get('/del_news1/{id}','NewsController@del');
 Route::get('/delnews/{id}','NewsController@delete');
 Route::get('/updatenews/{id}','NewsController@update');
 Route::post('/updatenews2/{id}','NewsController@update2');
@@ -79,7 +90,8 @@ Route::post('addproduct2','AdminProductController@add2');
 Route::get('/editproduct', 'AdminProductController@edit');
 Route::get('/updateproduct/{id}','AdminProductController@update');
 Route::post('/updateproduct2/{id}','AdminProductController@update2');
-Route::get('/delete/{id}','AdminProductController@delete');
+Route::get('/del_product1/{id}','AdminProductController@del');
+Route::get('/deleteproduct/{id}','AdminProductController@delete');
 
 Route::get('/addcolor','ColorController@add');
 Route::post('/addcolor2','ColorController@add2');
@@ -96,7 +108,8 @@ Route::get('/co_article/{id}','BlogController@co');
 Route::get('/editarticle','BlogController@edit');
 Route::get('/updatearticle/{id}','BlogController@update');
 Route::post('/updatearticle2/{id}','BlogController@update2');
-Route::get('/delarticle/{id}','BlogController@delete');
+Route::get('/del_article1/{id}','BlogController@del');
+Route::get('/deletearticle/{id}','BlogController@delete');
 
 
 Route::post('add_blogcomment/{id}','BlogCommentController@add');
@@ -114,7 +127,8 @@ Route::get('/all_repairs','RepairController@all');
 Route::get('/edit_repair/{id}','RepairController@edit');
 Route::post('/edit_repair2/{id}','RepairController@edit2');
 Route::get('/adminrepair','RepairController@adminrepair');
-Route::get('/opinion','OpinionController@show');
+
+
 
 Route::get('test','ProductController@test');
 Route::get('test2','ProductController@test2');

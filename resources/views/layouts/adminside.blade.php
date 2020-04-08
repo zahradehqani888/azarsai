@@ -75,12 +75,7 @@
                 
               </ul>
             </li>
-            <li class="nav-item">
-              <a href="/showcomplaints" class="nav-link <?php if(Request::is('showcomplaints')): ?> active <?php endif; ?>">
-                <i class="nav-icon fa fa-edit"></i>
-                <p>شکایات</p>
-              </a>
-            </li>
+
             <li class="nav-item has-treeview">
               <a href="#" class="nav-link">
                 <i class="nav-icon fa fa-newspaper-o"></i>
@@ -135,25 +130,6 @@
                 
               </ul>
             </li>
-            
-            <li class="nav-item ">
-              <a href="/addgaranty" class="nav-link <?php if(Request::is('addgaranty')): ?> active <?php endif; ?>">
-                <i class="nav-icon fa fa-folder"></i>
-                <p>
-                  گارانتی
-
-                </p>
-              </a>
-             </li>
-            <li class="nav-item ">
-              <a href="/adminrepair" class="nav-link <?php if(Request::is('adminrepair')): ?> active <?php endif; ?>">
-                <i class="nav-icon fa fa-cog"></i>
-                <p>
-                  تعمیرات
-
-                </p>
-              </a>
-            </li>
             <li class="nav-item has-treeview">
               <a href="#" class="nav-link">
                 <i class="nav-icon fa fa-cart-plus"></i>
@@ -181,8 +157,40 @@
                     <p>ویرایش محصولات</p>
                   </a>
                 </li>
-                </ul>
+              </ul>
             </li>
+            
+            <li class="nav-item ">
+              <a href="/addgaranty" class="nav-link <?php if(Request::is('addgaranty')): ?> active <?php endif; ?>">
+                <i class="nav-icon fa fa-folder"></i>
+                <p>
+                  گارانتی
+
+                </p>
+              </a>
+             </li>
+            <li class="nav-item ">
+              <a href="/adminrepair" class="nav-link <?php if(Request::is('adminrepair')): ?> active <?php endif; ?>">
+                <i class="nav-icon fa fa-cog"></i>
+                <p>
+                  تعمیرات
+
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/showcomplaints" class="nav-link <?php if(Request::is('showcomplaints')): ?> active <?php endif; ?>">
+                <i class="nav-icon fa fa-edit"></i>
+                <p>شکایات و انتقادات</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/showopinion" class="nav-link <?php if(Request::is('showopinion')): ?> active <?php endif; ?>">
+                <i class="nav-icon fa fa-check-square"></i>
+                <p>نظر سنجی</p>
+              </a>
+            </li>
+
             
           </ul>
         </nav>

@@ -43,10 +43,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/shownews">اخبار</a>
                 </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="/addcomplaint">فرم شکایات و انتقادات</a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/shop">فروشگاه</a>
                 </li>
@@ -60,7 +56,10 @@
                     <a class="nav-link" href="/contact_us">تماس با ما</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/opinion">نظرسنجی</a>
+                    <a class="nav-link" href="/addcomplaint"> شکایات و انتقادات</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/add_opinion">نظرسنجی</a>
                 </li>
                 </ul>
             </div>

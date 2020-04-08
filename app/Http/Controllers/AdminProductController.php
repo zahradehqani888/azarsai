@@ -138,6 +138,10 @@ class AdminProductController extends Controller
         $product=AdminProduct::all();
         return view('edit_product',compact('product'));
     }
+    public function del($id)
+    {
+        return back()->with('del',$id);
+    }
     public function delete($id){
         AdminProduct::find($id)->delete();
         Product::find($id)->delete();

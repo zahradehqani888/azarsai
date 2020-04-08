@@ -55,6 +55,10 @@ class NewsController extends Controller
         $news=News::all();
         return view('edit_news',compact('news'));
     }
+    public function del($id)
+    {
+        return back()->with('del',$id);
+    }
     public function delete($id){
         News::find($id)->delete();
         return back()->with('success','ok');

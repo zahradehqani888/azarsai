@@ -62,7 +62,7 @@
                                                 <div class="card-body">
                                                     <button type="button" class="btn btn-tool" data-widget="remove" data-toggle="tooltip" ><i class="fa fa-times" style="color:black"></i></button>
                                                     <div>
-                                                    <img src="../assets/images/newsimages/{{$news->image}}"style="height:250px">
+                                                    <img src="assets/images/newsimages/{{$news->image}}"style="height:250px">
                                                     </div>
                                                 </div>
 

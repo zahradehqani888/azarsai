@@ -37,7 +37,18 @@
                                         محصول با موفقیت حذف شد.
                                     </div>
                                 </div>
-                            <?php endif; ?> 
+                            <?php endif; ?>
+                            <?php if (Session::get('del')): ?>
+                            <div class="container" style="padding-top: 20px">
+                                <div class="alert alert-danger alert-dismissible fade show text-success">
+
+                                    آیا می خواهید این محصول را حذف کنید؟
+                                    </br>
+                                    <a href="/deleteproduct/<?php echo Session::get('del') ?>"> <button type="button" class="btn btn-default" style="margin-left: 20px">بله</button></a>
+                                    <a href=""><button type="button" class="btn btn-default" >خیر</button></a>
+                                </div>
+                            </div>
+                            <?php endif; ?>
                             <table class="table table-hover">
                                 <tr>
                                     <th>نام محصول</th>
@@ -54,7 +65,8 @@
                                     <td>{{$p->storage}}</td>
                                     <td>{{$p->color_id}}</td>
                                     <td>
-                                        <a href="#" class="icon"data-toggle="modal" data-target="#Modal1" ><i class="fa fa-trash "></i></a>
+                                        {{--<a href="#" class="icon"data-toggle="modal" data-target="#Modal1" ><i class="fa fa-trash "></i></a>--}}
+                                        <a href="del_product1/{{$p->id}}" class="icon"><i class="fa fa-trash "></i></a>
                                         <a href="/updateproduct/{{$p->id}}" class="icon" ><i class="fa fa-refresh"></i></a>
 
                                     </td>

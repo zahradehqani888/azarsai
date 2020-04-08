@@ -37,12 +37,24 @@
                                         نمایندگی با موفقیت حذف شد.
                                     </div>
                                 </div>
-                            <?php endif; ?> 
+                            <?php endif; ?>
+                            <?php if (Session::get('del')): ?>
+                            <div class="container" style="padding-top: 20px">
+                                <div class="alert alert-danger alert-dismissible fade show text-success">
+
+                                    آیا می خواهید این نمایندگی را حذف کنید؟
+                                    </br>
+                                    <a href="/deletebranch/<?php echo Session::get('del') ?>"> <button type="button" class="btn btn-default" style="margin-left: 20px">بله</button></a>
+                                    <a href=""><button type="button" class="btn btn-default" >خیر</button></a>
+                                </div>
+                            </div>
+                            <?php endif; ?>
                                         <table class="table table-hover">
                                             <tr>
                                                 <th>نام نمایندگی</th>
                                                 <th>شهر</th>
                                                 <th>تلفن</th>
+                                                <th></th>
                                                 
                                                 
                                             </tr>
@@ -54,7 +66,8 @@
                                                 <td>{{$b->city}}</td>
                                                 <td>{{$b->tell}}</td>
                                                 <td>
-                                                    <a href="#" class="icon"data-toggle="modal" data-target="#Modal" ><i class="fa fa-trash "></i></a>
+                                                    {{--<a href="#" class="icon"data-toggle="modal" data-target="#Modal" ><i class="fa fa-trash "></i></a>--}}
+                                                    <a href="del_branch1/{{$b->id}}" class="icon"><i class="fa fa-trash "></i></a>
                                                     <a href="/updatebranch/{{$b->id}}" class="icon" ><i class="fa fa-refresh"></i></a>
                        
                                                 </td>

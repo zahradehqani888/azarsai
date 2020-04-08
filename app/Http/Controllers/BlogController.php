@@ -90,6 +90,10 @@ class BlogController extends Controller
         return back()->with('success','ok');
 
     }
+    public function del($id)
+    {
+        return back()->with('del',$id);
+    }
 
     public function delete($id)
     {

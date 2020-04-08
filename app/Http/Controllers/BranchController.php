@@ -125,6 +125,10 @@ class BranchController extends Controller {
         $branches= Branch::all();
         return view('edit_branches',compact('branches'));
     }
+    public function del($id)
+    {
+        return back()->with('del',$id);
+    }
     public function delete($id){
         Branch::find($id)->delete();
         return back()->with('success','ok');
